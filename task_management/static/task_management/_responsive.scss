@@ -1,0 +1,21 @@
+@mixin for-tablets2{
+    @media (max-width:750px){
+   @content;
+}
+}
+@mixin for-tablets{
+    @media (max-width:900px){
+   @content;
+}
+}
+@mixin for-large{
+    @media (max-width:1100px){
+   @content;
+}
+}
+
+@mixin for-large-devices{
+    @media (max-width:1200px){
+   @content;
+}
+}

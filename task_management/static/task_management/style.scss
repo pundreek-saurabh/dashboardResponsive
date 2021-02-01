@@ -1,0 +1,267 @@
+@import '_responsive.scss';
+body{
+    margin: 0px;
+    background-color: rgb(34, 13, 73);
+    position:relative;
+}
+.sidebar{
+        position: absolute;
+        min-height:95%;
+        width:10%;
+        top:2.5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items:center;
+        color:white;
+    
+        
+        .mid{
+            display:flex;
+            flex-direction: column;
+            i{
+                color:white;
+                margin:30px;
+                cursor:pointer
+            }
+        }
+        .top{
+            i{
+                color:white;
+                margin: 30px;
+                cursor:pointer
+            }
+
+        }
+        .bottom{
+            i{
+                color:white;
+                margin: 30px;
+                cursor:pointer;
+            }
+
+        }
+    }
+
+.content{
+    min-height:95%;
+    width:89%;
+    background-color:rgb(221, 234, 243);
+    position:absolute;
+    left:10%;
+    top:2.5%;
+    right:2.5%;
+    border-radius: 50px;
+    display:flex;
+    justify-content: space-between;
+   .left-content{
+       width:1000px;
+    .navbar-left{
+        margin:30px 0 10px 30px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .search-bar{
+            position:relative;
+
+        input{
+            
+            margin:12px 15px 0 25px;
+            display:flex;
+            width:300px;
+            height:30px;
+            border-radius: 20px;
+            padding: 0 20px 0 30px;
+            &:active{
+                outline: none;
+            }
+            
+        }
+        .search{
+            position:absolute;
+            top:45%;
+            left:9%;
+            cursor:pointer;
+
+        }
+    }
+}
+
+    .greetings{
+        min-height:15%;
+        width:90%;
+        background-color: rgb(34, 13, 73);
+        z-index: 2;
+        margin:0 10px 10px 30px;
+        border-radius:20px;
+        color:white;
+        p{
+            color:white;
+            padding: 20px 20px 0 20px;
+            //margin:20px;
+        }
+        h2{
+            margin:20px;
+        }
+    }
+    .activities{
+        min-height:35%;
+        width:90%;
+        margin:0 10px 10px 30px;
+        background-color: white;
+        border-radius: 20px;
+        h4{
+            padding:20 20 0 20;
+        }
+    }
+    .tasks{
+        width:90%;
+        margin:0 10px 10px 30px;
+        h4{
+            margin:0 10px 0 15;
+        }
+        .heading{
+            display:flex;
+            padding:0;
+            margin:5 10 10 15;
+            justify-content: space-between;
+            li{
+            list-style-type:none;
+            text-decoration:none;
+            width: 80px;
+            text-align: center;
+            
+
+        
+            }
+            
+        }
+        .cards{
+            min-height:5%;
+            background-color: white;
+            width:100%;
+            border-radius: 20px;
+            margin:0 0 10px 0;
+    
+            .values{
+                display:flex;
+                margin:0;
+                padding: 0;
+                justify-content: space-between;
+                margin:0 10 0 15;
+               li{
+                   list-style-type: none;
+                   width:80px;
+                   //text-align: center;
+                   display: flex;
+                   align-items: center;
+                   justify-content: center;
+               }
+
+            }
+        
+        }
+    }
+}
+    .right-content{
+        width:500px;
+        .navbar-right{
+            margin:30px 0 10px 30px;
+           display: flex;
+        }
+        .calendar{
+            width:85%;
+            max-height:50%;
+            background-color: white;
+            margin:auto;
+            margin-bottom: 15px;
+            border-radius: 20px;
+        }
+        .cards-right{
+            width:85%;
+            height:10%;
+            background-color: white;
+            margin:auto;
+            border-radius: 20px;
+            margin-bottom: 15px;
+                i{
+                    
+                    font-size: 30px;
+                    vertical-align: middle;
+                    text-align: center;
+                    margin:20 15 20 15;
+                }
+            
+        }
+    }
+}
+@include for-large-devices{
+    .wrapper{
+        margin-left: 0;
+    }
+    .cards-right {
+        display:none;
+    }
+    .content .left-content .tasks{
+        width:140%;
+      }
+    .content .left-content .greetings {
+        width:140%;
+    }
+    .content .left-content .activities {
+        width: 140%;
+        min-height: 20%;
+    }
+
+}
+@include for-large{
+
+    .content .left-content .tasks{
+        width:120%;
+      }
+    .content .left-content .greetings {
+        width:120%;
+    }
+    .content .left-content .activities {
+        width: 120%;
+       
+    }
+    .content .right-content .navbar-right{
+        display: none;
+    }
+
+}
+@include for-tablets{
+
+    .content .left-content .tasks{
+        width:95%;
+      }
+    .content .left-content .greetings {
+        width:95%;
+    }
+    .content .left-content .activities {
+        width: 95%;
+       
+    }
+    
+}
+
+@include for-tablets2{
+    .content .left-content{
+        width:500px;
+    }
+
+    .content .left-content .tasks{
+        width:90%;
+        margin:10;
+      }
+    .content .left-content .greetings {
+        width:90%;
+        margin:10;
+    }
+    .content .left-content .activities {
+        width: 90%;
+        margin: 10;
+       
+    }
+}
